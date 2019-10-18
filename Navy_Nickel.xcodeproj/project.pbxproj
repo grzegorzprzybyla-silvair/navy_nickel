@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */; };
 		E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072CF2359B2D100083E46 /* AppDelegate.swift */; };
-		E18072D22359B2D100083E46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072D12359B2D100083E46 /* SceneDelegate.swift */; };
-		E18072D42359B2D100083E46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072D32359B2D100083E46 /* ContentView.swift */; };
 		E18072D62359B2DA00083E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18072D52359B2DA00083E46 /* Assets.xcassets */; };
 		E18072D92359B2DA00083E46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18072D82359B2DA00083E46 /* Preview Assets.xcassets */; };
 		E18072DC2359B2DA00083E46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18072DA2359B2DA00083E46 /* LaunchScreen.storyboard */; };
 		E18072E72359B2DA00083E46 /* Navy_NickelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072E62359B2DA00083E46 /* Navy_NickelTests.swift */; };
+		E18072F32359B62600083E46 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072F22359B62600083E46 /* ChaptersViewController.swift */; };
+		E18072F62359BD8200083E46 /* MBEMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072F52359BD8200083E46 /* MBEMetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSetupViewController.swift; sourceTree = "<group>"; };
 		E18072CC2359B2D100083E46 /* Navy_Nickel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navy_Nickel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18072CF2359B2D100083E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E18072D12359B2D100083E46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E18072D32359B2D100083E46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E18072D52359B2DA00083E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E18072D82359B2DA00083E46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E18072DB2359B2DA00083E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		E18072E22359B2DA00083E46 /* Navy_NickelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Navy_NickelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18072E62359B2DA00083E46 /* Navy_NickelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navy_NickelTests.swift; sourceTree = "<group>"; };
 		E18072E82359B2DA00083E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E18072F22359B62600083E46 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		E18072F52359BD8200083E46 /* MBEMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBEMetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E13508D62359D37700FE42AD /* Chapter1 */ = {
+			isa = PBXGroup;
+			children = (
+				E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */,
+			);
+			path = Chapter1;
+			sourceTree = "<group>";
+		};
 		E18072C32359B2D100083E46 = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +89,9 @@
 		E18072CE2359B2D100083E46 /* Navy_Nickel */ = {
 			isa = PBXGroup;
 			children = (
+				E18072F42359BD7800083E46 /* Views */,
+				E18072F12359B61F00083E46 /* ViewControllers */,
 				E18072CF2359B2D100083E46 /* AppDelegate.swift */,
-				E18072D12359B2D100083E46 /* SceneDelegate.swift */,
-				E18072D32359B2D100083E46 /* ContentView.swift */,
 				E18072D52359B2DA00083E46 /* Assets.xcassets */,
 				E18072DA2359B2DA00083E46 /* LaunchScreen.storyboard */,
 				E18072DD2359B2DA00083E46 /* Info.plist */,
@@ -105,6 +115,23 @@
 				E18072E82359B2DA00083E46 /* Info.plist */,
 			);
 			path = Navy_NickelTests;
+			sourceTree = "<group>";
+		};
+		E18072F12359B61F00083E46 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E13508D62359D37700FE42AD /* Chapter1 */,
+				E18072F22359B62600083E46 /* ChaptersViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E18072F42359BD7800083E46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E18072F52359BD8200083E46 /* MBEMetalView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,9 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18072F32359B62600083E46 /* ChaptersViewController.swift in Sources */,
+				E18072F62359BD8200083E46 /* MBEMetalView.swift in Sources */,
+				E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */,
 				E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */,
-				E18072D22359B2D100083E46 /* SceneDelegate.swift in Sources */,
-				E18072D42359B2D100083E46 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
