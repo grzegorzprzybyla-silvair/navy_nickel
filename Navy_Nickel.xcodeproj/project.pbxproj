@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */; };
+		E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */; };
+		E1665C1F235B8ADD0091A3E8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1E235B8ADD0091A3E8 /* Shaders.metal */; };
 		E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072CF2359B2D100083E46 /* AppDelegate.swift */; };
 		E18072D62359B2DA00083E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18072D52359B2DA00083E46 /* Assets.xcassets */; };
 		E18072D92359B2DA00083E46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18072D82359B2DA00083E46 /* Preview Assets.xcassets */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSetupViewController.swift; sourceTree = "<group>"; };
+		E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing2DViewController.swift; sourceTree = "<group>"; };
+		E1665C1E235B8ADD0091A3E8 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		E18072CC2359B2D100083E46 /* Navy_Nickel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navy_Nickel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18072CF2359B2D100083E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E18072D52359B2DA00083E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,12 +64,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E13508D62359D37700FE42AD /* Chapter1 */ = {
+		E1665C1D235B8ACC0091A3E8 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
-				E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */,
+				E1665C1E235B8ADD0091A3E8 /* Shaders.metal */,
 			);
-			path = Chapter1;
+			path = Metal;
 			sourceTree = "<group>";
 		};
 		E18072C32359B2D100083E46 = {
@@ -89,6 +93,7 @@
 		E18072CE2359B2D100083E46 /* Navy_Nickel */ = {
 			isa = PBXGroup;
 			children = (
+				E1665C1D235B8ACC0091A3E8 /* Metal */,
 				E18072F42359BD7800083E46 /* Views */,
 				E18072F12359B61F00083E46 /* ViewControllers */,
 				E18072CF2359B2D100083E46 /* AppDelegate.swift */,
@@ -120,8 +125,9 @@
 		E18072F12359B61F00083E46 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E13508D62359D37700FE42AD /* Chapter1 */,
+				E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */,
 				E18072F22359B62600083E46 /* ChaptersViewController.swift */,
+				E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -235,10 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1665C1F235B8ADD0091A3E8 /* Shaders.metal in Sources */,
 				E18072F32359B62600083E46 /* ChaptersViewController.swift in Sources */,
 				E18072F62359BD8200083E46 /* MBEMetalView.swift in Sources */,
 				E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */,
 				E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */,
+				E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

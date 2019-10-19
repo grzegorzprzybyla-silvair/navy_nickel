@@ -9,7 +9,8 @@
 import UIKit
 
 class ChaptersViewController: UITableViewController {
-    let chapters: [String] = ["Scene setup"]
+    let chapters: [(String, UIViewController.Type)] = [("Scene setup", SceneSetupViewController.self),
+                                                       ("2D Drawing", Drawing2DViewController.self)]
     let cellIdentifier = "cellIdentifier"
     
     override func viewDidLoad() {
@@ -32,12 +33,13 @@ class ChaptersViewController: UITableViewController {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         }
         cell.selectionStyle = .none
-        cell.textLabel?.text = chapters[indexPath.row]
+        cell.textLabel?.text = chapters[indexPath.row].0
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = SceneSetupViewController()
+        let viewControllerType = chapters[indexPath.row].1
+        let viewController = viewControllerType.init()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
