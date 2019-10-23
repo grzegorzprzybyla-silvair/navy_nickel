@@ -72,21 +72,19 @@ extension Drawing2DViewController {
         }
         
         private func makeBuffers() {
-            
-           let vertexData: [Float] = [
-               0.0,  1.0, 0.0,
-              -1.0, -1.0, 0.0,
-               1.0, -1.0, 0.0
+            let vertex: [Vertex] = [
+                Vertex(position: SIMD4<Float>(x: 0, y: 0.5, z: 0, w: 1), color: SIMD4<Float>(x: 1, y: 0, z: 0, w: 1)),
+                Vertex(position: SIMD4<Float>(x: -0.5, y: -0.5, z: 0, w: 1), color: SIMD4<Float>(x: 0, y: 1, z: 0, w: 1)),
+                Vertex(position: SIMD4<Float>(x: 0.5, y: -0.5, z: 0, w: 1), color: SIMD4<Float>(x: 0, y: 0, z: 1, w: 1)),
             ]
             
-            let dataSize = vertexData.count * MemoryLayout.size(ofValue: vertexData[0])
-            vertexBuffer = device.makeBuffer(bytes: vertexData, length: dataSize, options: [])
+            vertexBuffer = device.makeBuffer(bytes: vertex, length: vertex.sizeOf(), options: [])
         }
         
         private func makePipeline() {
             guard let library = device.makeDefaultLibrary() else { return }
-            let vertexFunc = library.makeFunction(name: "basic_vertex")
-            let fragmentFunc = library.makeFunction(name: "basic_fragment")
+            let vertexFunc = library.makeFunction(name: "vertex_main")
+            let fragmentFunc = library.makeFunction(name: "fragment_main")
         
             let pipelineDescriptor = MTLRenderPipelineDescriptor()
             pipelineDescriptor.vertexFunction = vertexFunc
@@ -112,7 +110,7 @@ extension Drawing2DViewController {
             let encoder = commandBuffer!.makeRenderCommandEncoder(descriptor: passDescriptor)!
             encoder.setRenderPipelineState(pipeline)
             encoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-            encoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 3, instanceCount: 1)
+            encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
             encoder.endEncoding()
             
             commandBuffer?.present(drawable)
