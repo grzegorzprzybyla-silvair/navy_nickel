@@ -8,9 +8,4 @@
 
 import UIKit
 
-class SceneSetupViewController: UIViewController {
-    override func loadView() {
-        let view = MBEMetalView()
-        self.view = view
-    }
-}
+class SceneSetupViewController: BaseMetalViewController<ColoredMetalView> {}

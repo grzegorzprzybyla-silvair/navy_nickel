@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array {
-    func sizeOf() -> Int {
+    func memoryLayoutSize() -> Int {
         guard count > 0 else { return 0 }
         let itemSize = MemoryLayout.size(ofValue: self[0])
         return count * itemSize

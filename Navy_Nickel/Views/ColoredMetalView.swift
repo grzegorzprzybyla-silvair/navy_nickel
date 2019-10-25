@@ -1,5 +1,5 @@
 //
-//  MBEMetalView.swift
+//  ColoredMetalView.swift
 //  Navy_Nickel
 //
 //  Created by Grzegorz Przybyła(S) on 18/10/2019.
@@ -9,32 +9,8 @@
 import UIKit
 import Metal
 
-class MBEMetalView: UIView {
-    override class var layerClass: AnyClass { return CAMetalLayer.self }
-    var metalLayer: CAMetalLayer { return layer as! CAMetalLayer }
-    private lazy var device: MTLDevice = {
-        let device = MTLCreateSystemDefaultDevice()
-        self.metalLayer.device = device
-        self.metalLayer.pixelFormat = .bgra8Unorm
-        return device!
-    }()
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        _ = device
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        _ = device
-    }
-    
-    override func didMoveToWindow() {
-        super.didMoveToWindow()
-        redraw()
-    }
-    
-    private func redraw() {
+class ColoredMetalView: BaseMetalView {
+    override func redraw() {
         guard let drawable = metalLayer.nextDrawable() else { return }
         let texture = drawable.texture
         let passDescriptor = MTLRenderPassDescriptor()
