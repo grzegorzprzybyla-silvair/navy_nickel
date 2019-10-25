@@ -9,18 +9,27 @@
 #include <metal_stdlib>
 using namespace metal;
  
-struct Vertex
-{
-    float4 position [[position]];
+struct VertexIn {
+    packed_float4 position;
+    packed_float4 color;
+};
+
+struct VertexOut {
+    float4 postion [[position]];
     float4 color;
 };
  
-vertex Vertex vertex_main(const device Vertex *vertices [[buffer(0)]],
-                          const uint vid [[vertex_id]])
-{
-    return vertices[vid];
+vertex VertexOut vertex_main(const device VertexIn *vertices [[buffer(0)]],
+                          const uint vid [[vertex_id]]) {
+    VertexIn vertexIn = vertices[vid];
+
+    VertexOut vertexOut;
+    vertexOut.postion = float4(vertexIn.position);
+    vertexOut.color = float4(vertexIn.color);
+    return vertexOut;
 }
  
-fragment float4 fragment_main(Vertex inVertex [[stage_in]]) {
-    return inVertex.color;
+fragment half4 fragment_main(VertexOut interpolated [[stage_in]]) {
+    float4 color = interpolated.color;
+    return half4(color[0], color[1], color[2], color[3]);
 }

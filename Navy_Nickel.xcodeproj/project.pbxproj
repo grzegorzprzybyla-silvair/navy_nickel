@@ -15,6 +15,8 @@
 		1CA8DFE02362E5B500D6C1A6 /* Cube3DMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFDF2362E5B500D6C1A6 /* Cube3DMetalView.swift */; };
 		1CA8DFE32362EC4500D6C1A6 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE22362EC4500D6C1A6 /* Node.swift */; };
 		1CA8DFE52362EDF600D6C1A6 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */; };
+		1CA8DFE72362F46000D6C1A6 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE62362F46000D6C1A6 /* Cube.swift */; };
+		1CA8DFEB2362F86800D6C1A6 /* Matrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE92362F86800D6C1A6 /* Matrix4.m */; };
 		E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */; };
 		E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */; };
 		E1665C1F235B8ADD0091A3E8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1E235B8ADD0091A3E8 /* Shaders.metal */; };
@@ -47,6 +49,10 @@
 		1CA8DFDF2362E5B500D6C1A6 /* Cube3DMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube3DMetalView.swift; sourceTree = "<group>"; };
 		1CA8DFE22362EC4500D6C1A6 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		1CA8DFE62362F46000D6C1A6 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		1CA8DFE92362F86800D6C1A6 /* Matrix4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix4.m; sourceTree = "<group>"; };
+		1CA8DFEA2362F86800D6C1A6 /* Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix4.h; sourceTree = "<group>"; };
+		1CA8DFEC2362F87A00D6C1A6 /* Navy_Nickel-BridgningHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Navy_Nickel-BridgningHeader.h"; sourceTree = "<group>"; };
 		E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSetupViewController.swift; sourceTree = "<group>"; };
 		E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing2DViewController.swift; sourceTree = "<group>"; };
 		E1665C1E235B8ADD0091A3E8 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
@@ -90,18 +96,21 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		1CA8DFE12362EC3900D6C1A6 /* Utilities */ = {
+		1CA8DFE12362EC3900D6C1A6 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
 				1CA8DFE22362EC4500D6C1A6 /* Node.swift */,
 				1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */,
+				1CA8DFE62362F46000D6C1A6 /* Cube.swift */,
 			);
-			path = Utilities;
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		E1665C1D235B8ACC0091A3E8 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				1CA8DFEA2362F86800D6C1A6 /* Matrix4.h */,
+				1CA8DFE92362F86800D6C1A6 /* Matrix4.m */,
 				E1665C1E235B8ADD0091A3E8 /* Shaders.metal */,
 			);
 			path = Metal;
@@ -128,7 +137,7 @@
 		E18072CE2359B2D100083E46 /* Navy_Nickel */ = {
 			isa = PBXGroup;
 			children = (
-				1CA8DFE12362EC3900D6C1A6 /* Utilities */,
+				1CA8DFE12362EC3900D6C1A6 /* Nodes */,
 				1CA8DFD82362E01E00D6C1A6 /* Entities */,
 				E18BC0022360AD6100F6E0BC /* Extensions */,
 				E1665C1D235B8ACC0091A3E8 /* Metal */,
@@ -139,6 +148,7 @@
 				E18072DA2359B2DA00083E46 /* LaunchScreen.storyboard */,
 				E18072DD2359B2DA00083E46 /* Info.plist */,
 				E18072D72359B2DA00083E46 /* Preview Content */,
+				1CA8DFEC2362F87A00D6C1A6 /* Navy_Nickel-BridgningHeader.h */,
 			);
 			path = Navy_Nickel;
 			sourceTree = "<group>";
@@ -296,7 +306,9 @@
 				1CA8DFD72362DF5400D6C1A6 /* Vertex.swift in Sources */,
 				1CA8DFDE2362E4CD00D6C1A6 /* Traingle2DMetalView.swift in Sources */,
 				1CA8DFE02362E5B500D6C1A6 /* Cube3DMetalView.swift in Sources */,
+				1CA8DFE72362F46000D6C1A6 /* Cube.swift in Sources */,
 				E18072F32359B62600083E46 /* ChaptersViewController.swift in Sources */,
+				1CA8DFEB2362F86800D6C1A6 /* Matrix4.m in Sources */,
 				1CA8DFD52362DEE200D6C1A6 /* Drawing3DViewController.swift in Sources */,
 				E18072F62359BD8200083E46 /* ColoredMetalView.swift in Sources */,
 				E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */,
@@ -469,6 +481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silvair.Navy-Nickel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Navy_Nickel/Navy_Nickel-BridgningHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -489,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silvair.Navy-Nickel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Navy_Nickel/Navy_Nickel-BridgningHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
