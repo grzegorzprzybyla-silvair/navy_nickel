@@ -9,5 +9,6 @@
 #ifndef Navy_Nickel_BridgningHeader_h
 #define Navy_Nickel_BridgningHeader_h
 
+#import "Matrix4.h"
 
 #endif /* Navy_Nickel_BridgningHeader_h */

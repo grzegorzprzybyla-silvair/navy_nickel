@@ -109,8 +109,6 @@
 		E1665C1D235B8ACC0091A3E8 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
-				1CA8DFEA2362F86800D6C1A6 /* Matrix4.h */,
-				1CA8DFE92362F86800D6C1A6 /* Matrix4.m */,
 				E1665C1E235B8ADD0091A3E8 /* Shaders.metal */,
 			);
 			path = Metal;
@@ -149,6 +147,8 @@
 				E18072DD2359B2DA00083E46 /* Info.plist */,
 				E18072D72359B2DA00083E46 /* Preview Content */,
 				1CA8DFEC2362F87A00D6C1A6 /* Navy_Nickel-BridgningHeader.h */,
+				1CA8DFEA2362F86800D6C1A6 /* Matrix4.h */,
+				1CA8DFE92362F86800D6C1A6 /* Matrix4.m */,
 			);
 			path = Navy_Nickel;
 			sourceTree = "<group>";

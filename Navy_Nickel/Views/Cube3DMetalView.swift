@@ -9,6 +9,7 @@
 import Foundation
 import Metal
 
+//https://www.raywenderlich.com/728-metal-tutorial-with-swift-3-part-2-moving-to-3d#toc-anchor-009
 class Cube3DMetalView: BaseMetalView {
     lazy var node: Cube = {
         return Cube(device: self.device)
@@ -17,6 +18,11 @@ class Cube3DMetalView: BaseMetalView {
 
     override func redraw() {
         guard let drawable = metalLayer.nextDrawable() else { return }
+        node.positionX = -0.25
+        node.positionY = -0.25
+        node.positionZ = -0.25
+        node.rotationZ = Matrix4.degrees(toRad: 45)
+        node.scale = 0.5
         node.render(commandQueue: commandQueue, piplineState: pipeline, drawable: drawable, clearColor: nil)
     }
 }
