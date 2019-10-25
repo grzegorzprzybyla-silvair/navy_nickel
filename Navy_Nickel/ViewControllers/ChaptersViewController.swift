@@ -10,7 +10,8 @@ import UIKit
 
 class ChaptersViewController: UITableViewController {
     let chapters: [(String, UIViewController.Type)] = [("Scene setup", SceneSetupViewController.self),
-                                                       ("2D Drawing", Drawing2DViewController.self)]
+                                                       ("2D Drawing", Drawing2DViewController.self),
+                                                       ("3D Drawing", Drawing3DViewController.self)]
     let cellIdentifier = "cellIdentifier"
     
     override func viewDidLoad() {

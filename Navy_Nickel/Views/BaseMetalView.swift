@@ -18,7 +18,6 @@ class BaseMetalView: UIView {
         self.metalLayer.pixelFormat = .bgra8Unorm
         return device!
     }()
-    var vertexBuffer: MTLBuffer!
     var commandQueue: MTLCommandQueue!
     var pipeline: MTLRenderPipelineState!
 
@@ -51,14 +50,26 @@ class BaseMetalView: UIView {
         }
     }
 
-    func setup() {
+    private func setup() {
         _ = device
         commandQueue = device.makeCommandQueue()
-        makeBuffers()
         makePipeline()
     }
 
-    func makeBuffers() {}
-    func makePipeline() {}
+    private func makePipeline() {
+        guard let library = device.makeDefaultLibrary() else { return }
+        let vertexFunc = library.makeFunction(name: "vertex_main")
+        let fragmentFunc = library.makeFunction(name: "fragment_main")
+
+        let pipelineDescriptor = MTLRenderPipelineDescriptor()
+        pipelineDescriptor.vertexFunction = vertexFunc
+        pipelineDescriptor.fragmentFunction = fragmentFunc
+        pipelineDescriptor.colorAttachments[0].pixelFormat = metalLayer.pixelFormat
+        do {
+            pipeline = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
+        } catch {
+            fatalError("Error: \(error)")
+        }
+    }
     func redraw() {}
 }

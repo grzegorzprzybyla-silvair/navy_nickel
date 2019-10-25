@@ -8,14 +8,4 @@
 
 import UIKit
 
-class Drawing3DViewController: UIViewController {
-
-    override func loadView() {
-        let view = MBEMetalView()
-        self.view = view
-    }
-
-    class MBEMetalView: UIView {
-
-    }
-}
+class Drawing3DViewController: BaseMetalViewController<Cube3DMetalView> {}
