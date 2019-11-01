@@ -14,15 +14,28 @@ class Cube3DMetalView: BaseMetalView {
     lazy var node: Cube = {
         return Cube(device: self.device)
     }()
-
+    var projectionMatrix: Matrix4!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        projectionMatrix = Matrix4.makePerspectiveViewAngle(Matrix4.degrees(toRad: 85.0),
+                                                            aspectRatio: Float(bounds.size.width / bounds.size.height),
+                                                            nearZ: 0.01, farZ: 100.0)
+    }
+    
+    override func gameLoop(timeSinceLastUpdate: CFTimeInterval) {
+        node.updateWithDelta(delta: timeSinceLastUpdate)
+        autoreleasepool { [weak self] in
+            self?.redraw()
+        }
+    }
 
     override func redraw() {
         guard let drawable = metalLayer.nextDrawable() else { return }
-        node.positionX = -0.25
-        node.positionY = -0.25
-        node.positionZ = -0.25
-        node.rotationZ = Matrix4.degrees(toRad: 45)
-        node.scale = 0.5
-        node.render(commandQueue: commandQueue, piplineState: pipeline, drawable: drawable, clearColor: nil)
+        let worldModelMatrix = Matrix4()
+        worldModelMatrix.translate(0.0, y: 0.0, z: -7.0)
+        worldModelMatrix.rotateAroundX(Matrix4.degrees(toRad: 25), y: 0.0, z: 0.0)
+        node.render(commandQueue: commandQueue, piplineState: pipeline, drawable: drawable,
+                    parentModelViewMatrix: worldModelMatrix, projectionMatrix: projectionMatrix, clearColor: nil)
     }
 }

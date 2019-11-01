@@ -16,6 +16,6 @@ class Traingle2DMetalView: BaseMetalView {
 
     override func redraw() {
         guard let drawable = metalLayer.nextDrawable() else { return }
-        objectToDraw.render(commandQueue: commandQueue, piplineState: pipeline, drawable: drawable, clearColor: nil)
+//        objectToDraw.render(commandQueue: commandQueue, piplineState: pipeline, drawable: drawable, clearColor: nil)
     }
 }

@@ -15,6 +15,9 @@ class Node {
     let name: String
     var vertexCount: Int
     var vertexBuffer: MTLBuffer
+    
+    var time: CFTimeInterval = 0.0
+
 
     var positionX: Float = 0.0
     var positionY: Float = 0.0
@@ -32,8 +35,13 @@ class Node {
         vertexBuffer = device.makeBuffer(bytes: verticies, length: verticies.memoryLayoutSize(), options: [])!
         vertexCount = verticies.count
     }
+    
+    func updateWithDelta(delta: CFTimeInterval) {
+        time += delta
+    }
 
-    func render(commandQueue: MTLCommandQueue, piplineState: MTLRenderPipelineState, drawable: CAMetalDrawable, clearColor: MTLClearColor?) {
+    func render(commandQueue: MTLCommandQueue, piplineState: MTLRenderPipelineState,
+                drawable: CAMetalDrawable, parentModelViewMatrix: Matrix4, projectionMatrix: Matrix4, clearColor: MTLClearColor?) {
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].texture = drawable.texture
         renderPassDescriptor.colorAttachments[0].loadAction = .clear
@@ -42,16 +50,23 @@ class Node {
         guard let commandBuffer = commandQueue.makeCommandBuffer() else { return }
 
         let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+        renderEncoder?.setCullMode(.front)
         renderEncoder?.setRenderPipelineState(piplineState)
         renderEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
 
         let modelMatrix = self.modelMatrix()
+        modelMatrix.multiplyLeft(parentModelViewMatrix)
+        
         let dataSize = MemoryLayout<Float>.stride * Matrix4.numberOfElements()
-        let uniformBuffer = device.makeBuffer(length: dataSize, options: [])!
+        let uniformBuffer = device.makeBuffer(length: dataSize * 2, options: [])!
         let bufferPointer = uniformBuffer.contents()
-        memcpy(bufferPointer, modelMatrix.raw(), MemoryLayout<Float>.size * Matrix4.numberOfElements())
+        
+        memcpy(bufferPointer, modelMatrix.raw(), MemoryLayout<Float>.size*Matrix4.numberOfElements())
+        memcpy(bufferPointer + MemoryLayout<Float>.size * Matrix4.numberOfElements(), projectionMatrix.raw(),
+               MemoryLayout<Float>.size * Matrix4.numberOfElements())
+        
         renderEncoder?.setVertexBuffer(uniformBuffer, offset: 0, index: 1)
-
+        
         renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertexCount, instanceCount: vertexCount/3)
         renderEncoder?.endEncoding()
 

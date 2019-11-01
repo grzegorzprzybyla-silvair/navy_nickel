@@ -22,6 +22,7 @@ class BaseMetalView: UIView {
     var pipeline: MTLRenderPipelineState!
 
     var displayLink: CADisplayLink?
+    var lastFrameTimestamp: CFTimeInterval = 0.0
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,9 +46,18 @@ class BaseMetalView: UIView {
     }
 
     @objc func displayLinkDidFire(_ sender: CADisplayLink) {
-        autoreleasepool { [weak self] in
-            self?.redraw()
-        }
+            
+          if lastFrameTimestamp == 0.0 {
+            lastFrameTimestamp = sender.timestamp
+          }
+            
+          let elapsed: CFTimeInterval = sender.timestamp - lastFrameTimestamp
+          lastFrameTimestamp = sender.timestamp
+            
+          gameLoop(timeSinceLastUpdate: elapsed)
+    }
+
+    func gameLoop(timeSinceLastUpdate: CFTimeInterval) {
     }
 
     private func setup() {
