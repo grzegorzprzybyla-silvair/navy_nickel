@@ -18,10 +18,10 @@ Plan ramowy pracy:
 
 | Data        | Rozdział      | Zrobione  |
 | ------------|:-------------:| -----:|
-|14-20 X 19|Setting the Stage and Clearing the Screen| [x]
-|21-27 X 19|	Drawing in 2D| [x]
-|28.X-03.XI.19|	Drawing in 3D|[x]
-|04-10 XI 19|	Lighting fundaments 1/2|[ ]
+|14-20 X 19|Setting the Stage and Clearing the Screen| - [x]
+|21-27 X 19|	Drawing in 2D| - [x]
+|28.X-03.XI.19|	Drawing in 3D| - [x]
+|04-10 XI 19|	Lighting fundaments 1/2|- [ ]
 |11-18 XI 19|	Lighting fundaments 2/2|[ ]
 |25.XI-03.XII 19|	URLOP|[ ]
 |04 - 10 XII 19|	Textures|[ ]
