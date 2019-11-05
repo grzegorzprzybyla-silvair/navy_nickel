@@ -9,7 +9,7 @@
 import Foundation
 import Metal
 
-//https://www.raywenderlich.com/728-metal-tutorial-with-swift-3-part-2-moving-to-3d#toc-anchor-009
+// https://www.raywenderlich.com/728-metal-tutorial-with-swift-3-part-2-moving-to-3d#toc-anchor-009
 class Cube3DMetalView: BaseMetalView {
     lazy var node: Cube = {
         return Cube(device: self.device)
