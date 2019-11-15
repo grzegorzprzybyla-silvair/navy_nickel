@@ -8,11 +8,11 @@ Aplikacja bedzie listą zagadnien związanych z programowaniem w frameworku Meta
 
 ### Analiza SMART:
 
-S - Konkretny - 1 aplikacja prezentująca (częściowe) zastosowanie frameworku Metal
-M - Mierzalny - każdego tygodnia w aplikacji zaimplementuje zadanie z jednego rozdziału książki
-A - Osiągalny - 1 rodział/1 tydzień - 24 rozdziały, rozdziały maja miedzy 7-20 stron
-R - Relevant - chciałbym zrozumieć działanie i implementacje niskopoziomowego api programowania GPU
-T - Określony czasowo - 24 tygodni
+- S - Konkretny - 1 aplikacja prezentująca (częściowe) zastosowanie frameworku Metal
+- M - Mierzalny - każdego tygodnia w aplikacji zaimplementuje zadanie z jednego rozdziału książki
+- A - Osiągalny - 1 rodział/1 tydzień - 24 rozdziały, rozdziały maja miedzy 7-20 stron
+- R - Relevant - chciałbym zrozumieć działanie i implementacje niskopoziomowego api programowania GPU
+- T - Określony czasowo - 24 tygodni
 
 Plan ramowy pracy:
 
@@ -21,7 +21,7 @@ Plan ramowy pracy:
 |14-20 X 19|Setting the Stage and Clearing the Screen|[x]
 |21-27 X 19|	Drawing in 2D|[x]
 |28.X-03.XI.19|	Drawing in 3D|[x]
-|04-10 XI 19|	Lighting fundaments 1/2|[ ]
+|04-10 XI 19|	Lighting fundaments 1/2|[x]
 |11-18 XI 19|	Lighting fundaments 2/2|[ ]
 |25.XI-03.XII 19|	URLOP|[ ]
 |04 - 10 XII 19|	Textures|[ ]
