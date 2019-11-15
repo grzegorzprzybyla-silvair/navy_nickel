@@ -17,9 +17,27 @@
 		1CA8DFE52362EDF600D6C1A6 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */; };
 		1CA8DFE72362F46000D6C1A6 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE62362F46000D6C1A6 /* Cube.swift */; };
 		1CA8DFEB2362F86800D6C1A6 /* Matrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE92362F86800D6C1A6 /* Matrix4.m */; };
+		E104E5B7237E9E43009D7D9F /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AA237E9E42009D7D9F /* Renderer.swift */; };
+		E104E5B8237E9E43009D7D9F /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AB237E9E42009D7D9F /* Mesh.swift */; };
+		E104E5B9237E9E43009D7D9F /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AD237E9E42009D7D9F /* VertexDescriptor.swift */; };
+		E104E5BA237E9E43009D7D9F /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AE237E9E42009D7D9F /* Shaders.metal */; };
+		E104E5BB237E9E43009D7D9F /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AF237E9E42009D7D9F /* Node.swift */; };
+		E104E5BC237E9E43009D7D9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B0237E9E42009D7D9F /* Model.swift */; };
+		E104E5BD237E9E43009D7D9F /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B1237E9E42009D7D9F /* Camera.swift */; };
+		E104E5BE237E9E43009D7D9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B2237E9E43009D7D9F /* ViewController.swift */; };
+		E104E5BF237E9E43009D7D9F /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B3237E9E43009D7D9F /* Primitive.swift */; };
+		E104E5C0237E9E43009D7D9F /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B4237E9E43009D7D9F /* Submesh.swift */; };
+		E104E5C4237E9E7B009D7D9F /* LocalClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5C3237E9E7B009D7D9F /* LocalClasses.swift */; };
+		E104E5C6237E9ED7009D7D9F /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5C5237E9ED7009D7D9F /* ViewControllerExtension.swift */; };
+		E104E5CD237E9FCC009D7D9F /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E104E5C9237E9FCC009D7D9F /* train.mtl */; };
+		E104E5CE237E9FCC009D7D9F /* treefir.obj in Resources */ = {isa = PBXBuildFile; fileRef = E104E5CA237E9FCC009D7D9F /* treefir.obj */; };
+		E104E5CF237E9FCC009D7D9F /* treefir.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E104E5CB237E9FCC009D7D9F /* treefir.mtl */; };
+		E104E5D0237E9FCC009D7D9F /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = E104E5CC237E9FCC009D7D9F /* train.obj */; };
+		E104E5D6237E9FE9009D7D9F /* DebugLights.metal in Sources */ = {isa = PBXBuildFile; fileRef = E104E5D3237E9FE9009D7D9F /* DebugLights.metal */; };
+		E104E5D7237E9FE9009D7D9F /* DebugLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5D4237E9FE9009D7D9F /* DebugLights.swift */; };
+		E104E5D8237E9FE9009D7D9F /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5D5237E9FE9009D7D9F /* MathLibrary.swift */; };
 		E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */; };
 		E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */; };
-		E1665C1F235B8ADD0091A3E8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1E235B8ADD0091A3E8 /* Shaders.metal */; };
 		E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18072CF2359B2D100083E46 /* AppDelegate.swift */; };
 		E18072D62359B2DA00083E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18072D52359B2DA00083E46 /* Assets.xcassets */; };
 		E18072D92359B2DA00083E46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18072D82359B2DA00083E46 /* Preview Assets.xcassets */; };
@@ -53,6 +71,26 @@
 		1CA8DFE92362F86800D6C1A6 /* Matrix4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix4.m; sourceTree = "<group>"; };
 		1CA8DFEA2362F86800D6C1A6 /* Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix4.h; sourceTree = "<group>"; };
 		1CA8DFEC2362F87A00D6C1A6 /* Navy_Nickel-BridgningHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Navy_Nickel-BridgningHeader.h"; sourceTree = "<group>"; };
+		E104E5AA237E9E42009D7D9F /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		E104E5AB237E9E42009D7D9F /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		E104E5AC237E9E42009D7D9F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		E104E5AD237E9E42009D7D9F /* VertexDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
+		E104E5AE237E9E42009D7D9F /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		E104E5AF237E9E42009D7D9F /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		E104E5B0237E9E42009D7D9F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E104E5B1237E9E42009D7D9F /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		E104E5B2237E9E43009D7D9F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E104E5B3237E9E43009D7D9F /* Primitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
+		E104E5B4237E9E43009D7D9F /* Submesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
+		E104E5C3237E9E7B009D7D9F /* LocalClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalClasses.swift; sourceTree = "<group>"; };
+		E104E5C5237E9ED7009D7D9F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		E104E5C9237E9FCC009D7D9F /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
+		E104E5CA237E9FCC009D7D9F /* treefir.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = treefir.obj; sourceTree = "<group>"; };
+		E104E5CB237E9FCC009D7D9F /* treefir.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = treefir.mtl; sourceTree = "<group>"; };
+		E104E5CC237E9FCC009D7D9F /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
+		E104E5D3237E9FE9009D7D9F /* DebugLights.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = DebugLights.metal; path = Navy_Nickel/Lights/Utility/DebugLights.metal; sourceTree = SOURCE_ROOT; };
+		E104E5D4237E9FE9009D7D9F /* DebugLights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugLights.swift; path = Navy_Nickel/Lights/Utility/DebugLights.swift; sourceTree = SOURCE_ROOT; };
+		E104E5D5237E9FE9009D7D9F /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathLibrary.swift; path = Navy_Nickel/Lights/Utility/MathLibrary.swift; sourceTree = SOURCE_ROOT; };
 		E13508D72359D3CB00FE42AD /* SceneSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSetupViewController.swift; sourceTree = "<group>"; };
 		E1665C1B235B86870091A3E8 /* Drawing2DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing2DViewController.swift; sourceTree = "<group>"; };
 		E1665C1E235B8ADD0091A3E8 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
@@ -106,6 +144,49 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		E104E5A9237E9E28009D7D9F /* Lights */ = {
+			isa = PBXGroup;
+			children = (
+				E104E5D2237E9FDD009D7D9F /* _Utils */,
+				E104E5D1237E9FD0009D7D9F /* _Models */,
+				E104E5B1237E9E42009D7D9F /* Camera.swift */,
+				E104E5AC237E9E42009D7D9F /* Common.h */,
+				E104E5AB237E9E42009D7D9F /* Mesh.swift */,
+				E104E5B0237E9E42009D7D9F /* Model.swift */,
+				E104E5AF237E9E42009D7D9F /* Node.swift */,
+				E104E5B3237E9E43009D7D9F /* Primitive.swift */,
+				E104E5AA237E9E42009D7D9F /* Renderer.swift */,
+				E104E5AE237E9E42009D7D9F /* Shaders.metal */,
+				E104E5B4237E9E43009D7D9F /* Submesh.swift */,
+				E104E5AD237E9E42009D7D9F /* VertexDescriptor.swift */,
+				E104E5B2237E9E43009D7D9F /* ViewController.swift */,
+				E104E5C3237E9E7B009D7D9F /* LocalClasses.swift */,
+				E104E5C5237E9ED7009D7D9F /* ViewControllerExtension.swift */,
+			);
+			path = Lights;
+			sourceTree = "<group>";
+		};
+		E104E5D1237E9FD0009D7D9F /* _Models */ = {
+			isa = PBXGroup;
+			children = (
+				E104E5C9237E9FCC009D7D9F /* train.mtl */,
+				E104E5CC237E9FCC009D7D9F /* train.obj */,
+				E104E5CB237E9FCC009D7D9F /* treefir.mtl */,
+				E104E5CA237E9FCC009D7D9F /* treefir.obj */,
+			);
+			path = _Models;
+			sourceTree = "<group>";
+		};
+		E104E5D2237E9FDD009D7D9F /* _Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E104E5D3237E9FE9009D7D9F /* DebugLights.metal */,
+				E104E5D4237E9FE9009D7D9F /* DebugLights.swift */,
+				E104E5D5237E9FE9009D7D9F /* MathLibrary.swift */,
+			);
+			path = _Utils;
+			sourceTree = "<group>";
+		};
 		E1665C1D235B8ACC0091A3E8 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +216,7 @@
 		E18072CE2359B2D100083E46 /* Navy_Nickel */ = {
 			isa = PBXGroup;
 			children = (
+				E104E5A9237E9E28009D7D9F /* Lights */,
 				1CA8DFE12362EC3900D6C1A6 /* Nodes */,
 				1CA8DFD82362E01E00D6C1A6 /* Entities */,
 				E18BC0022360AD6100F6E0BC /* Extensions */,
@@ -282,8 +364,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E104E5CE237E9FCC009D7D9F /* treefir.obj in Resources */,
+				E104E5D0237E9FCC009D7D9F /* train.obj in Resources */,
 				E18072DC2359B2DA00083E46 /* LaunchScreen.storyboard in Resources */,
 				E18072D92359B2DA00083E46 /* Preview Assets.xcassets in Resources */,
+				E104E5CF237E9FCC009D7D9F /* treefir.mtl in Resources */,
+				E104E5CD237E9FCC009D7D9F /* train.mtl in Resources */,
 				E18072D62359B2DA00083E46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,22 +388,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1665C1F235B8ADD0091A3E8 /* Shaders.metal in Sources */,
+				E104E5BE237E9E43009D7D9F /* ViewController.swift in Sources */,
 				1CA8DFD72362DF5400D6C1A6 /* Vertex.swift in Sources */,
 				1CA8DFDE2362E4CD00D6C1A6 /* Traingle2DMetalView.swift in Sources */,
+				E104E5BB237E9E43009D7D9F /* Node.swift in Sources */,
+				E104E5D7237E9FE9009D7D9F /* DebugLights.swift in Sources */,
 				1CA8DFE02362E5B500D6C1A6 /* Cube3DMetalView.swift in Sources */,
 				1CA8DFE72362F46000D6C1A6 /* Cube.swift in Sources */,
 				E18072F32359B62600083E46 /* ChaptersViewController.swift in Sources */,
 				1CA8DFEB2362F86800D6C1A6 /* Matrix4.m in Sources */,
+				E104E5BF237E9E43009D7D9F /* Primitive.swift in Sources */,
+				E104E5BD237E9E43009D7D9F /* Camera.swift in Sources */,
 				1CA8DFD52362DEE200D6C1A6 /* Drawing3DViewController.swift in Sources */,
 				E18072F62359BD8200083E46 /* ColoredMetalView.swift in Sources */,
+				E104E5C0237E9E43009D7D9F /* Submesh.swift in Sources */,
 				E13508D82359D3CB00FE42AD /* SceneSetupViewController.swift in Sources */,
+				E104E5B9237E9E43009D7D9F /* VertexDescriptor.swift in Sources */,
 				E18BC0042360AD6B00F6E0BC /* Array+SizeOf.swift in Sources */,
+				E104E5C6237E9ED7009D7D9F /* ViewControllerExtension.swift in Sources */,
+				E104E5B8237E9E43009D7D9F /* Mesh.swift in Sources */,
+				E104E5C4237E9E7B009D7D9F /* LocalClasses.swift in Sources */,
+				E104E5BC237E9E43009D7D9F /* Model.swift in Sources */,
+				E104E5D6237E9FE9009D7D9F /* DebugLights.metal in Sources */,
 				1CA8DFDC2362E46800D6C1A6 /* BaseMetalViewController.swift in Sources */,
+				E104E5D8237E9FE9009D7D9F /* MathLibrary.swift in Sources */,
 				1CA8DFDA2362E26C00D6C1A6 /* BaseMetalView.swift in Sources */,
+				E104E5BA237E9E43009D7D9F /* Shaders.metal in Sources */,
 				E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */,
 				1CA8DFE52362EDF600D6C1A6 /* Triangle.swift in Sources */,
 				E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */,
+				E104E5B7237E9E43009D7D9F /* Renderer.swift in Sources */,
 				1CA8DFE32362EC4500D6C1A6 /* MetalNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
