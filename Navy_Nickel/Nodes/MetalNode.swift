@@ -1,5 +1,5 @@
 //
-//  Node.swift
+//  MetalNode.swift
 //  Navy_Nickel
 //
 //  Created by Grzegorz Przybyła on 25/10/2019.
@@ -10,7 +10,7 @@ import Foundation
 import Metal
 import QuartzCore
 
-class Node {
+class MetalNode {
     let device: MTLDevice
     let name: String
     var vertexCount: Int

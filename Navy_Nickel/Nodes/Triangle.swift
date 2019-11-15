@@ -9,7 +9,7 @@
 import Foundation
 import Metal
 
-class Triangle: Node {
+class Triangle: MetalNode {
     init(device: MTLDevice) {
         let vertex = [
             Vertex(position: [0, 0.5, 0, 1], color: [1, 0, 0, 1]),

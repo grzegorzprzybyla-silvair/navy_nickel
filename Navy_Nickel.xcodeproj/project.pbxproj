@@ -13,7 +13,7 @@
 		1CA8DFDC2362E46800D6C1A6 /* BaseMetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFDB2362E46800D6C1A6 /* BaseMetalViewController.swift */; };
 		1CA8DFDE2362E4CD00D6C1A6 /* Traingle2DMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFDD2362E4CD00D6C1A6 /* Traingle2DMetalView.swift */; };
 		1CA8DFE02362E5B500D6C1A6 /* Cube3DMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFDF2362E5B500D6C1A6 /* Cube3DMetalView.swift */; };
-		1CA8DFE32362EC4500D6C1A6 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE22362EC4500D6C1A6 /* Node.swift */; };
+		1CA8DFE32362EC4500D6C1A6 /* MetalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE22362EC4500D6C1A6 /* MetalNode.swift */; };
 		1CA8DFE52362EDF600D6C1A6 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */; };
 		1CA8DFE72362F46000D6C1A6 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE62362F46000D6C1A6 /* Cube.swift */; };
 		1CA8DFEB2362F86800D6C1A6 /* Matrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFE92362F86800D6C1A6 /* Matrix4.m */; };
@@ -47,7 +47,7 @@
 		1CA8DFDB2362E46800D6C1A6 /* BaseMetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMetalViewController.swift; sourceTree = "<group>"; };
 		1CA8DFDD2362E4CD00D6C1A6 /* Traingle2DMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traingle2DMetalView.swift; sourceTree = "<group>"; };
 		1CA8DFDF2362E5B500D6C1A6 /* Cube3DMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube3DMetalView.swift; sourceTree = "<group>"; };
-		1CA8DFE22362EC4500D6C1A6 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		1CA8DFE22362EC4500D6C1A6 /* MetalNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalNode.swift; sourceTree = "<group>"; };
 		1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		1CA8DFE62362F46000D6C1A6 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		1CA8DFE92362F86800D6C1A6 /* Matrix4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix4.m; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		1CA8DFE12362EC3900D6C1A6 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				1CA8DFE22362EC4500D6C1A6 /* Node.swift */,
+				1CA8DFE22362EC4500D6C1A6 /* MetalNode.swift */,
 				1CA8DFE42362EDF600D6C1A6 /* Triangle.swift */,
 				1CA8DFE62362F46000D6C1A6 /* Cube.swift */,
 			);
@@ -318,7 +318,7 @@
 				E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */,
 				1CA8DFE52362EDF600D6C1A6 /* Triangle.swift in Sources */,
 				E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */,
-				1CA8DFE32362EC4500D6C1A6 /* Node.swift in Sources */,
+				1CA8DFE32362EC4500D6C1A6 /* MetalNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
