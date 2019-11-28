@@ -11,17 +11,13 @@ import UIKit
 class ChaptersViewController: UITableViewController {
     let chapters: [(String, UIViewController.Type)] = [("Scene setup", SceneSetupViewController.self),
                                                        ("2D Drawing", Drawing2DViewController.self),
-                                                       ("3D Drawing", ViewController.self),
-                                                       ("Lighting", ViewController.self)]
+                                                       ("3D Drawing", Drawing3DViewController.self),
+                                                       ("Lighting",  LightViewController.self)]
     let cellIdentifier = "cellIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Metal by examples"
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

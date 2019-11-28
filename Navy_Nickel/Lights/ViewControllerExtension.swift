@@ -31,7 +31,7 @@
 
 import UIKit
 
-extension ViewController {
+extension LightViewController {
   static var previousScale: CGFloat = 1
   
   func addGestureRecognizers(to view: UIView) {
@@ -55,11 +55,11 @@ extension ViewController {
   
   @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
     let sensitivity: Float = 3
-    let delta = Float(gesture.scale - ViewController.previousScale) * sensitivity
+    let delta = Float(gesture.scale - LightViewController.previousScale) * sensitivity
     renderer?.camera.zoom(delta: delta)
-    ViewController.previousScale = gesture.scale
+    LightViewController.previousScale = gesture.scale
     if gesture.state == .ended {
-      ViewController.previousScale = 1
+      LightViewController.previousScale = 1
     }
   }
 }

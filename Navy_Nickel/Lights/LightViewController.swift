@@ -32,7 +32,7 @@
 import MetalKit
 import UIKit
 
-class ViewController: LocalViewController {
+class LightViewController: LocalViewController {
   
   var renderer: Renderer?
     
