@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C395804238EA54100305E4B /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E1665C1E235B8ADD0091A3E8 /* Shaders.metal */; };
 		1CA8DFD52362DEE200D6C1A6 /* Drawing3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFD42362DEE200D6C1A6 /* Drawing3DViewController.swift */; };
 		1CA8DFD72362DF5400D6C1A6 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFD62362DF5400D6C1A6 /* Vertex.swift */; };
 		1CA8DFDA2362E26C00D6C1A6 /* BaseMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA8DFD92362E26C00D6C1A6 /* BaseMetalView.swift */; };
@@ -20,11 +21,10 @@
 		E104E5B7237E9E43009D7D9F /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AA237E9E42009D7D9F /* Renderer.swift */; };
 		E104E5B8237E9E43009D7D9F /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AB237E9E42009D7D9F /* Mesh.swift */; };
 		E104E5B9237E9E43009D7D9F /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AD237E9E42009D7D9F /* VertexDescriptor.swift */; };
-		E104E5BA237E9E43009D7D9F /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AE237E9E42009D7D9F /* Shaders.metal */; };
 		E104E5BB237E9E43009D7D9F /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5AF237E9E42009D7D9F /* Node.swift */; };
 		E104E5BC237E9E43009D7D9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B0237E9E42009D7D9F /* Model.swift */; };
 		E104E5BD237E9E43009D7D9F /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B1237E9E42009D7D9F /* Camera.swift */; };
-		E104E5BE237E9E43009D7D9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B2237E9E43009D7D9F /* ViewController.swift */; };
+		E104E5BE237E9E43009D7D9F /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B2237E9E43009D7D9F /* LightViewController.swift */; };
 		E104E5BF237E9E43009D7D9F /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B3237E9E43009D7D9F /* Primitive.swift */; };
 		E104E5C0237E9E43009D7D9F /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5B4237E9E43009D7D9F /* Submesh.swift */; };
 		E104E5C4237E9E7B009D7D9F /* LocalClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104E5C3237E9E7B009D7D9F /* LocalClasses.swift */; };
@@ -79,7 +79,7 @@
 		E104E5AF237E9E42009D7D9F /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E104E5B0237E9E42009D7D9F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E104E5B1237E9E42009D7D9F /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		E104E5B2237E9E43009D7D9F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E104E5B2237E9E43009D7D9F /* LightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
 		E104E5B3237E9E43009D7D9F /* Primitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
 		E104E5B4237E9E43009D7D9F /* Submesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		E104E5C3237E9E7B009D7D9F /* LocalClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalClasses.swift; sourceTree = "<group>"; };
@@ -147,10 +147,10 @@
 		E104E5A9237E9E28009D7D9F /* Lights */ = {
 			isa = PBXGroup;
 			children = (
+				E104E5AC237E9E42009D7D9F /* Common.h */,
 				E104E5D2237E9FDD009D7D9F /* _Utils */,
 				E104E5D1237E9FD0009D7D9F /* _Models */,
 				E104E5B1237E9E42009D7D9F /* Camera.swift */,
-				E104E5AC237E9E42009D7D9F /* Common.h */,
 				E104E5AB237E9E42009D7D9F /* Mesh.swift */,
 				E104E5B0237E9E42009D7D9F /* Model.swift */,
 				E104E5AF237E9E42009D7D9F /* Node.swift */,
@@ -159,7 +159,7 @@
 				E104E5AE237E9E42009D7D9F /* Shaders.metal */,
 				E104E5B4237E9E43009D7D9F /* Submesh.swift */,
 				E104E5AD237E9E42009D7D9F /* VertexDescriptor.swift */,
-				E104E5B2237E9E43009D7D9F /* ViewController.swift */,
+				E104E5B2237E9E43009D7D9F /* LightViewController.swift */,
 				E104E5C3237E9E7B009D7D9F /* LocalClasses.swift */,
 				E104E5C5237E9ED7009D7D9F /* ViewControllerExtension.swift */,
 			);
@@ -388,7 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E104E5BE237E9E43009D7D9F /* ViewController.swift in Sources */,
+				E104E5BE237E9E43009D7D9F /* LightViewController.swift in Sources */,
 				1CA8DFD72362DF5400D6C1A6 /* Vertex.swift in Sources */,
 				1CA8DFDE2362E4CD00D6C1A6 /* Traingle2DMetalView.swift in Sources */,
 				E104E5BB237E9E43009D7D9F /* Node.swift in Sources */,
@@ -412,8 +412,8 @@
 				E104E5D6237E9FE9009D7D9F /* DebugLights.metal in Sources */,
 				1CA8DFDC2362E46800D6C1A6 /* BaseMetalViewController.swift in Sources */,
 				E104E5D8237E9FE9009D7D9F /* MathLibrary.swift in Sources */,
+				1C395804238EA54100305E4B /* Shaders.metal in Sources */,
 				1CA8DFDA2362E26C00D6C1A6 /* BaseMetalView.swift in Sources */,
-				E104E5BA237E9E43009D7D9F /* Shaders.metal in Sources */,
 				E18072D02359B2D100083E46 /* AppDelegate.swift in Sources */,
 				1CA8DFE52362EDF600D6C1A6 /* Triangle.swift in Sources */,
 				E1665C1C235B86870091A3E8 /* Drawing2DViewController.swift in Sources */,

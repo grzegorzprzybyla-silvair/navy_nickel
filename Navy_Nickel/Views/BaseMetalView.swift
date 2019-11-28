@@ -10,6 +10,10 @@ import UIKit
 import Metal
 
 class BaseMetalView: UIView {
+
+    var vertexFunctionName: String { return "base_vertex_main" }
+    var fragmentFuncName: String { return "base_fragment_main" }
+
     override class var layerClass: AnyClass { return CAMetalLayer.self }
     var metalLayer: CAMetalLayer { return layer as! CAMetalLayer }
     lazy var device: MTLDevice = {
@@ -68,8 +72,8 @@ class BaseMetalView: UIView {
 
     private func makePipeline() {
         guard let library = device.makeDefaultLibrary() else { return }
-        let vertexFunc = library.makeFunction(name: "vertex_main")
-        let fragmentFunc = library.makeFunction(name: "fragment_main")
+        let vertexFunc = library.makeFunction(name: vertexFunctionName)
+        let fragmentFunc = library.makeFunction(name: fragmentFuncName)
 
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunc
